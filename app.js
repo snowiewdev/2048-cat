@@ -415,8 +415,9 @@ document.addEventListener('DOMContentLoaded', () => {
   createBoard();
   getBestScore();
   document.addEventListener('keydown', control);
+  document.body.addEventListener("mousemove", function () {
+    bgmStart();
+  });
   detectSwipe();
-  bgmStart();
-  
 });
 
