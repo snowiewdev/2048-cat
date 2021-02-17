@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+
+// sizes of grids
+$grid-width: 500px;
+$grid-spacing: 15px;
+$grid-row-cells: 4;
+$cell-size: ($grid-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+
+// colors
+$text-color: grey;
+$cell-color: #e5e5e5;
+$cell-text-color: black;
+$grid-color: lightgrey;
+
+// animation
+$transition-speed: 100ms;
+
+//css starts
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: $text-color;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #BCE5E2;
+}
+
+body::before{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(./media/cats.png);
+  opacity: 0.8;
+}
+
+button{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+.kaomoji{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  max-width: 550px;
+  padding: 25px;
+  position: relative;
+  background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95));
+  border: 2px solid $text-color;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.top-bar{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.title{
+  width: 60%;
+}
+
+.score-container{
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  div{
+    background: $grid-color;
+    border: 1px solid $grid-color;
+    color: white;
+    border-radius: 4px;
+    padding: 0.2rem 1rem;
+    margin-left: 1rem;
+    text-align: center;
+  }
+}
+
+.grid{
+  background: $grid-color;
+  width: $grid-width;
+  height: $grid-width;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: $grid-spacing;
+  margin: 1rem 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.grid-cell{
+  width: $cell-size;
+  height: $cell-size;
+  background: $cell-color;
+  color: $cell-text-color;
+  margin-left: $grid-spacing;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: $cell-size;
+  transition: all 0.3s ease;
+  background-position: center center;
+  background-size: cover;
+}
+
+//generate animation
+.flip-vertical-left {
+	animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+@keyframes flip-vertical-left {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+#result{ 
+  position: absolute; //relative to grid
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40%;
+  text-align: center;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease;
+}
+
+.againBtn{
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  color: white;
+  background: $text-color;
+  border: 2px solid $text-color;
+  border-radius: 4px; 
+  transition: all 0.3s ease;
+  &:hover, &:active, &:focus{
+    cursor: pointer;
+    background: transparent;
+    color: $text-color;
+    font-weight: bold;
+    border: 2px solid $text-color;
+  }
+}
+
+hr{
+  border: 0px;
+  border-bottom: 2px solid $text-color;
+}
+
+.footer{
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width:550px){
+  $grid-width: 280px;
+  $grid-spacing: 4px;
+  $grid-row-cells: 4;
+  $cell-size: ($grid-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+
+  *{
+    font-size: 70%;
+  }
+
+  .container{
+    padding: 1rem;
+    max-width: 380px;
+    width: 96%;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7));
+  }
+
+  .score-container{
+    div{
+      padding: 0 0.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .grid{
+    width: $grid-width;
+    height: $grid-width;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: $grid-spacing;
+    margin: 0 auto;
+    overscroll-behavior: contain;
+  }
+
+  .grid-cell{
+    width: $cell-size;
+    height: $cell-size;
+    margin-left: $grid-spacing;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: $cell-size;
+  }
+  
+}

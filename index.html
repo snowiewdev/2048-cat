@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> 2048-clone </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./media/paw1.png">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="top-bar">
+      <div class="title"> 
+        <h1> 2048 Cat <span class="kaomoji"> (＾• ω •＾) </span> </h1>
+        <p> Join the tiles to get your 2048! </p>
+        <p> Swipe or Press Arrow Keys to Play :) </p>
+      </div>
+
+      <div class="score-container">
+        <div class="score-title"> 
+          <p> Score </p>
+          <span id="score"> 0 </span>
+        </div>
+        <div class="bestScore-title"> 
+          <p> Best </p> 
+          <span id="bestScore"> 0 </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- <div id="result">
+        <h2 id="msg"> Game Over </h3>
+        <button class="againBtn" onclick="reset()"> Try Again </button>
+      </div> -->
+    </div>
+
+    <div class="description">
+      <br/>
+      <hr/>
+      <br/>
+      <h3> How to Play <span class="kaomoji"> ( ´ ▽ ` )/ </span> </h3>
+      <p> Press arrow keys or 'W, A, S, D' to move the tiles. <br/> Tiles with the same number merge into one when they touch. </p>
+      <br/>
+      <p> This project is a clone based on 2048 by Grabriele Cirulli. </p>
+      <p> I still haven't reached 2048 yet, lol. </p>
+      <br/>
+      <hr/>
+    </div>
+
+    <div class="footer"> 
+      Made by SnowieW. Just for fun. <span class="kaomoji"> ʕ •ᴥ• ʔ </span> <br/> 
+      - Art Materials from PNGEGG & Pixabay -
+    </div>
+    
+  </div>
+
+  <script src="./swipe-min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

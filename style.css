@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: grey;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: #BCE5E2;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(./media/cats.png);
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(./media/cats.png);
+  opacity: 0.8;
+}
+
+button {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.kaomoji {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 550px;
+  padding: 25px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.95)));
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.title {
+  width: 60%;
+}
+
+.score-container {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.score-container div {
+  background: lightgrey;
+  border: 1px solid lightgrey;
+  color: white;
+  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.grid {
+  background: lightgrey;
+  width: 500px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 15px;
+  margin: 1rem 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.grid-cell {
+  width: 106.25px;
+  height: 106.25px;
+  background: #e5e5e5;
+  color: black;
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 106.25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-position: center center;
+  background-size: cover;
+}
+
+.flip-vertical-left {
+  -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@-webkit-keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+@keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+#result {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40%;
+  text-align: center;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.againBtn {
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  color: white;
+  background: grey;
+  border: 2px solid grey;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.againBtn:hover, .againBtn:active, .againBtn:focus {
+  cursor: pointer;
+  background: transparent;
+  color: grey;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+hr {
+  border: 0px;
+  border-bottom: 2px solid grey;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 550px) {
+  * {
+    font-size: 70%;
+  }
+  .container {
+    padding: 1rem;
+    max-width: 380px;
+    width: 96%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7)));
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  }
+  .score-container div {
+    padding: 0 0.8rem;
+    margin-left: 0.5rem;
+  }
+  .grid {
+    width: 280px;
+    height: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 4px;
+    margin: 0 auto;
+    overscroll-behavior: contain;
+  }
+  .grid-cell {
+    width: 65px;
+    height: 65px;
+    margin-left: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 65px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
