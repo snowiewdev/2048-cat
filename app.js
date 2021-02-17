@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const meowThree = new Audio('./media/meow3.wav');
   const meowFour = new Audio('./media/meow4.wav');
   const meowFive = new Audio('./media/meow5.wav');
+  const bgm = new Audio('./media/bgm.mp3');
 
   // showValue
   function showValue(){
@@ -364,7 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
       meowFour.play();
     }
 
-
     // Increase sound effect when match continuously
     // switch(score){
     //   case 1: 
@@ -390,6 +390,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
   }
   
+  //start bgm music
+  function bgmStart() {
+    bgm.loop = true;
+    bgm.play();
+  }
 
   // Bestscore get & store in localStorage
   function recordBestScore(){
@@ -411,6 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
   getBestScore();
   document.addEventListener('keydown', control);
   detectSwipe();
+  bgmStart();
   
 });
 
