@@ -11,13 +11,13 @@ Play it now: https://2048-cats.netlify.app/
 ## 📷 Screenshots
 Pending... :P
 
-## 👾 Other Mini-Games
-Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
-Connect Four : https://github.com/snowiewdev/connectFour <br/>
-Hangman : https://github.com/snowiewdev/hangman
-
 ## 👑 Resource Credits
 BGM Music : Yummy Flavor <br/>
 Produced by Umbrtone, Provided by Umbrtone-No copyright music <br/>
 Video Link: youtu.be/tAaFg2u-i2c <br/>
 Art Materials : PNGEGG & Pixabay <br/>
+
+## 👾 Other Mini-Games
+Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
+Connect Four : https://github.com/snowiewdev/connectFour <br/>
+Hangman : https://github.com/snowiewdev/hangman
