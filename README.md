@@ -16,9 +16,8 @@ Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
 Connect Four : https://github.com/snowiewdev/connectFour <br/>
 Hangman : https://github.com/snowiewdev/hangman
 
-## Resource Credits
-BGM Music : Yummy Flavor
-Produced by Umbrtone
-Provided by Umbrtone-No copyright music
-Video Link: youtu.be/tAaFg2u-i2c
-Art Materials : PNGEGG & Pixabay
+## 👑 Resource Credits
+BGM Music : Yummy Flavor <br/>
+Produced by Umbrtone, Provided by Umbrtone-No copyright music <br/>
+Video Link: youtu.be/tAaFg2u-i2c <br/>
+Art Materials : PNGEGG & Pixabay <br/>
