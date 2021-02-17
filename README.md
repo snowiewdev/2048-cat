@@ -8,6 +8,9 @@ Play it now: https://2048-cats.netlify.app/
 2. Tiles with the same number merge into one when they touch.
 3. Win if you successfully matched 2048 :D! which I never did LMAO
 
+## 📷 Screenshots
+Pending... :P
+
 ## 👾 Other Mini-Games
 Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
 Connect Four : https://github.com/snowiewdev/connectFour <br/>
