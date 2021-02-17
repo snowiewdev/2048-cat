@@ -6,7 +6,7 @@ Play it now: https://2048-cats.netlify.app/
 ## 😜 How to play
 1. Press arrow keys / 'W, A, S, D' / Swipe in Mobile to move the tiles.
 2. Tiles with the same number merge into one when they touch.
-3. Win if you successfully matched 2048 :D!
+3. Win if you successfully matched 2048 :D! which I never did LMAO
 
 ## 👾 Other Mini-Games
 Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
