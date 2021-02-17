@@ -9,9 +9,9 @@ Play it now: https://2048-cats.netlify.app/
 3. Win if you successfully matched 2048 :D! which I never did LMAO
 
 ## 📷 Screenshots
-<img src="/media/screenshots/screenshot2.PNG" width="600"/>
+<img src="/media/screenshots/screenshot3.jpg" width="600"/>
 
-<img src="/media/screenshots/screenshot1.PNG" width="600"/>
+<img src="/media/screenshots/screenshot2.PNG" width="600"/>
 
 ## 👑 Resource Credits
 BGM Music : Yummy Flavor <br/>
