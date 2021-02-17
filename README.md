@@ -11,6 +11,8 @@ Play it now: https://2048-cats.netlify.app/
 ## 📷 Screenshots
 <img src="/media/screenshots/screenshot2.PNG" width="600"/>
 
+<img src="/media/screenshots/screenshot1.PNG" width="600"/>
+
 ## 👑 Resource Credits
 BGM Music : Yummy Flavor <br/>
 Produced by Umbrtone, Provided by Umbrtone-No copyright music <br/>
