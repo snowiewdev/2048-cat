@@ -418,6 +418,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.addEventListener("mousemove", function () {
     bgmStart();
   });
+  document.body.addEventListener("touchmove", function () {
+    bgmStart();
+  });
   detectSwipe();
 });
 
