@@ -191,7 +191,7 @@ hr {
 
 @media screen and (max-width: 550px) {
   * {
-    font-size: 80%;
+    font-size: 12px;
   }
   .container {
     padding: 1rem;
