@@ -323,8 +323,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // check for game over(no zero on board & no more combination available)
+  // check for game over (no zero on board & no more combination available)
   function checkForGameOver() {
+    // check for available space
     let zeros = 0;
     for (let i = 0; i < cells.length; i++) {
       if (cells[i].value == 0) {
@@ -332,21 +333,43 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // TODO pending to check there's still combination 
-    // let noCombination = false;
-
+    // Check there's still available moves/ combination 
+    let availableMoves = true;
+    function checkCombination() {
+      // check for any horizontal moves
+      for (let i=0; i< totalcells-1; i++) {
+        if ((i % width !== (width-1)) && cells[i].value === cells[i+1].value){
+          return;     // stop checking as horizontal move is available
+        }
+      }
+      // check for any vertical moves
+      for (let i=0; i< width*(width-1); i++) {
+        if (cells[i].value === cells[i+width].value){
+          return;     // stop checking as vertical move is available
+        }
+      }
+      availableMoves = false;
+    }
+    
     if (zeros === 0) {
-      showValue(); // show last generated grid
-      document.removeEventListener('keydown', control);
-      let resultMsg = "Game Over! :(";
-      msgBox(resultMsg);
-      recordBestScore();
+      checkCombination();
+      if (availableMoves == true) {
+        return;
+      } else {
+        showValue(); // show last generated grid
+        document.removeEventListener('keydown', control);
+        let resultMsg = "Game Over! :(";
+        msgBox(resultMsg);
+        recordBestScore();
+      }
     }
 
   }
 
   // sound effects when matched tiles
   function meowSound(score){
+
+    if (score < 4) { return; } // no combination no meow meow sound!!
 
     if (score <= 8) { 
       meowOne.currentTime = 0;
@@ -365,29 +388,6 @@ document.addEventListener('DOMContentLoaded', () => {
       meowFour.play();
     }
 
-    // Increase sound effect when match continuously
-    // switch(score){
-    //   case 1: 
-    //     meowOne.currentTime = 0;
-    //     meowOne.play();
-    //     break;
-    //   case 2:
-    //     meowTwo.currentTime = 0;
-    //     meowTwo.play();
-    //     break;
-    //   case 3:
-    //     meowThree.currentTime = 0;
-    //     meowThree.play();
-    //     break;
-    //   case 4:
-    //     meowFive.currentTime = 0;
-    //     meowFive.play();
-    //     break;
-    //   case 5: 
-    //     meowFour.currentTime = 0;
-    //     meowFour.play();
-    //     break;
-    // }
   }
   
   //start bgm music
@@ -421,3 +421,5 @@ document.addEventListener('DOMContentLoaded', () => {
   detectSwipe();
 });
 
+// further development:
+// Increase sound effect when match continuously
