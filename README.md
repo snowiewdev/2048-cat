@@ -22,4 +22,5 @@ Art Materials : PNGEGG & Pixabay <br/>
 ## 👾 Other Mini-Games
 Catch A Cat : https://github.com/snowiewdev/CatchACat <br/>
 Connect Four : https://github.com/snowiewdev/connectFour <br/>
-Hangman : https://github.com/snowiewdev/hangman
+Hangman : https://github.com/snowiewdev/hangman <br/>
+Reaction Timer : https://github.com/snowiewdev/reactionTimerGame
